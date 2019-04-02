@@ -74,6 +74,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: xerces:xmlParserAPIs:2.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: poi:poi:2.5.1-final-20040804" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: commons-collections:commons-collections:3.1" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: commons-lang:commons-lang:2.1" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
   </component>
 </module>
