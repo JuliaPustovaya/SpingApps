@@ -3,8 +3,8 @@ create table job
     id              serial      not null
         constraint job_pk
             primary key,
-    nameofcompany   varchar(50) not null,
-    adressofcompany varchar(50) not null
+    nameOfCompany   varchar(50) not null,
+    adressOfCompany varchar(50) not null
 );
 
 alter table job
