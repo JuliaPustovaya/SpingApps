@@ -66,7 +66,6 @@
 			<version>5.1.3.Final</version>
 		</dependency>
 
-		<!-- MySQL -->
 		<!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
 		<dependency>
 			<groupId>org.postgresql</groupId>
@@ -74,20 +73,6 @@
 			<version>42.2.5</version>
 		</dependency>
 
-
-		<!-- Joda-Time -->
-		<dependency>
-			<groupId>joda-time</groupId>
-			<artifactId>joda-time</artifactId>
-			<version>${joda-time.version}</version>
-		</dependency>
-
-		<!-- To map JodaTime with database type -->
-		<dependency>
-			<groupId>org.jadira.usertype</groupId>
-			<artifactId>usertype.core</artifactId>
-			<version>3.0.0.CR1</version>
-		</dependency>
 
 		<!-- Servlet+JSP+JSTL -->
 		<dependency>
@@ -209,9 +194,19 @@
 					</configuration>
 				</plugin>
 
-				
+
 			</plugins>
 		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
 		<finalName>SpringApps</finalName>
 	</build>
 </project>

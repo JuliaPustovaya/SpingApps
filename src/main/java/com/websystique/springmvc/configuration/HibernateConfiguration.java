@@ -6,6 +6,7 @@ import javax.sql.DataSource;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan({"com.websystique.springmvc.configuration"})
 @PropertySource(value = {"classpath:application.properties"})
 public class HibernateConfiguration {
+	//TODO проверить почему не связывет данные
+	@Value("${jdbc.driverClassName}")
+	private String driverClassName;
+
 
 	@Autowired
 	private Environment environment;
@@ -37,7 +42,7 @@ public class HibernateConfiguration {
 	@Bean
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(environment.getRequiredProperty("jdbc.driverClassName"));
+		dataSource.setDriverClassName(driverClassName);
 		dataSource.setUrl(environment.getRequiredProperty("jdbc.url"));
 		dataSource.setUsername(environment.getRequiredProperty("jdbc.username"));
 		dataSource.setPassword(environment.getRequiredProperty("jdbc.password"));
