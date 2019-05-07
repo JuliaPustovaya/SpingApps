@@ -1,18 +1,7 @@
 package htmlunit;
 
-import org.junit.After;
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-
-import com.gargoylesoftware.htmlunit.WebClient;
-import com.gargoylesoftware.htmlunit.html.HtmlForm;
-import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlSubmitInput;
-import com.gargoylesoftware.htmlunit.html.HtmlTextInput;
-
 public class HtmlUnitAndJUnitLiveTest {
-	private WebClient webClient;
+	/*private WebClient webClient;
 
 	@Before
 	public void init() throws Exception {
@@ -48,5 +37,5 @@ public class HtmlUnitAndJUnitLiveTest {
 		String receivedText = newPage.getHtmlElementById("received").getTextContent();
 
 		Assert.assertEquals(receivedText, text);
-	}
+	}                  */
 }
