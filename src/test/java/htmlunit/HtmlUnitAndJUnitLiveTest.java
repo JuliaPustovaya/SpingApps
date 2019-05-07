@@ -36,7 +36,7 @@ public class HtmlUnitAndJUnitLiveTest {
 		HtmlPage page;
 
 		String url = "http://localhost/message/showForm";
-		page = webClient.getPage(url);
+		page = webClient.getPage(url);                      
 
 		HtmlTextInput messageText = page.getHtmlElementById("message");
 		messageText.setValueAttribute(text);
