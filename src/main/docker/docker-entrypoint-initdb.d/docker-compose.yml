@@ -1,0 +1,19 @@
+version: '2'
+services:
+#  app:
+#    image: app
+#    ports:
+#    - "8080:8080"
+#    depends_on:
+#    - mypostgres
+
+  mypostgres:
+    image: postgres:9.3
+    container_name: my_postresql
+    ports:
+     - "5430:5432"
+    restart: always
+    volumes:
+    - :/docker-entrypoint-initdb.d/init.sql
+
+

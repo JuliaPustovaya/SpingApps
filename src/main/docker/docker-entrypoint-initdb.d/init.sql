@@ -1,5 +1,3 @@
-
-
 CREATE TABLE table1
 (
   ID   INTEGER ,
